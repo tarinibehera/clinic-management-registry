@@ -1,0 +1,23 @@
+server:
+  port: 15030
+
+management:
+  server:
+    servlet:
+      context-path: /
+
+spring:
+  application:
+    name: clinic-management-service-registry
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 60 
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false
+    renewal-threshold-update-interval-ms: 30000
